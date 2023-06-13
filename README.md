@@ -1,9 +1,9 @@
 # qa-fidelity-test-framework
 **Below are the few links are commands for setup**
 
-Download and Install Python 3 and above:-  Welcome to Python.org 
+Download and Install Python 3 and above:-  **https://www.python.org/**
 
-Download and Install Visual Studio Code:-  https://code.visualstudio.com/
+Download and Install Visual Studio Code:-  **https://code.visualstudio.com/**
 
 Command to download all dependencies: **pip install -r requirements.txt**
 
@@ -15,7 +15,7 @@ Command to execute your feature file with allure report: **behave -f allure_beha
 
 command to generate allure reports: allure serve reports
 
-NOTE - you may need to set-up\install an allure seperately for that please refer this link https://www.programsbuzz.com/article/how-install-allure-windows
+NOTE - you may need to set-up\install an allure seperately for that please refer this link **https://www.programsbuzz.com/article/how-install-allure-windows**
 
 **Extensions you need to Add in your VS code**
 
