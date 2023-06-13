@@ -1,5 +1,6 @@
 # qa-fidelity-test-framework
 **Below are the few links are commands for setup**
+
 Download and Install Python 3 and above:-  Welcome to Python.org 
 Download and Install Visual Studio Code:-  https://code.visualstudio.com/
 
