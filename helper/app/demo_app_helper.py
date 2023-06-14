@@ -6,7 +6,7 @@ import time
 from page_objects.selenium_methods.app_core_method import AppCorePage
 from utilities.path_configs import get_path_to_file
 from utilities.read_properties import read_config_file
-from utilities.pulse_logger import *
+from utilities.py_logger import *
 from appium.webdriver import Remote
 from utilities.allure_methods import *
 

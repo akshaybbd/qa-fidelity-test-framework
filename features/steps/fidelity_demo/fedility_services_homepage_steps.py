@@ -1,9 +1,9 @@
 # created by Abhijeet Thorat at 2023-06-13 17:26.
 #
 from behave import *
-from utilities.pulse_logger import *
+from utilities.py_logger import *
 from helper.fidelity_demo.fedility_services_helper import FidilityHelper
-from utilities.pulse_logger import *
+from utilities.py_logger import *
 FIDE_OBJ = FidilityHelper()
 
 logger = get_logger(logger_name=__name__)

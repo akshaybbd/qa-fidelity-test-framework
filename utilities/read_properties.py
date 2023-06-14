@@ -5,7 +5,7 @@ import configparser
 import warnings
 from utilities.path_configs import PathConfigs
 from utilities.path_configs import get_path_to_file
-from utilities.pulse_logger import get_logger
+from utilities.py_logger import get_logger
 
 warnings.simplefilter('always', DeprecationWarning)
 logger = get_logger(logger_name=__name__)

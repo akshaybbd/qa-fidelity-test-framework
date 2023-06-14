@@ -9,7 +9,7 @@ Notes:
 
 """
 from behave import *
-import utilities.pulse_logger as pulse_logger
+import utilities.py_logger as py_logger
 from utilities.chrome_driver_utils import initialize_driver
 from webdriver_manager.chrome import ChromeDriverManager
 from appium.webdriver.appium_service import AppiumService
@@ -20,7 +20,7 @@ from selenium import webdriver
 #from appium import webdriver
 
 
-logger = pulse_logger.get_logger(logger_name=__name__)
+logger = py_logger.get_logger(logger_name=__name__)
 
 @fixture
 def chrome_driver_setup(context):

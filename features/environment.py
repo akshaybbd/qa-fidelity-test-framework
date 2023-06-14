@@ -7,9 +7,9 @@ from fixtures.connection_fixture import (
     chrome_driver_setup,
     appium_server_setup,
  )
-import utilities.pulse_logger as pulse_logger
+import utilities.py_logger as py_logger
 
-logger = pulse_logger.get_logger(logger_name=__name__)
+logger = py_logger.get_logger(logger_name=__name__)
 
 def fixture_registries(context):
     """The registries that exist in the function scenarios.

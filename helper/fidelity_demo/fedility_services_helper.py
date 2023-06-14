@@ -6,7 +6,7 @@ from page_objects.selenium_methods.web_core_method import CorePage
 from utilities.allure_methods import *
 from utilities.path_configs import get_path_to_file
 from utilities.read_properties import read_config_file
-from utilities.pulse_logger import get_logger
+from utilities.py_logger import get_logger
 from utilities.allure_methods import *
 from selenium.webdriver import Chrome
 
