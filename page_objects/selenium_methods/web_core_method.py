@@ -12,7 +12,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import Select, WebDriverWait
-from utilities.pulse_logger import get_logger
+from utilities.py_logger import get_logger
 from utilities.allure_methods import allure_screenshot
 import warnings
 import os
@@ -38,6 +38,7 @@ class CorePage:
 
     def clicker(self,ui_xpath: str):
         """To click on web element"""
+        element = WebDriverWait(self.driver, timeout).until(EC.element_to_be_clickable(locator))
 
         sleep(2)
         content = self.driver.find_element("xpath", ui_xpath).text

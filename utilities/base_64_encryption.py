@@ -2,7 +2,7 @@
 #
 
 import base64
-import utilities.pulse_logger as pulse_logger
+import utilities.py_logger as py_logger
 
 def encodeMessage(message):
     """Encoding a string with base64 encryption

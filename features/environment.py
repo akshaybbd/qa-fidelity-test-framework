@@ -5,11 +5,11 @@ from behave.fixture import fixture_call_params
 from fixtures.connection_fixture import (
     use_fixture_by_tag,
     chrome_driver_setup,
-    appium_server_setup,
- )
-import utilities.pulse_logger as pulse_logger
 
-logger = pulse_logger.get_logger(logger_name=__name__)
+ )
+import utilities.py_logger as py_logger
+
+logger = py_logger.get_logger(logger_name=__name__)
 
 def fixture_registries(context):
     """The registries that exist in the function scenarios.
@@ -18,7 +18,7 @@ def fixture_registries(context):
     """
     return {
         "chrome.driver": fixture_call_params(chrome_driver_setup),
-        "appium.server": fixture_call_params(appium_server_setup),
+        #"appium.server": fixture_call_params(appium_server_setup),
     }
 
 def before_tag(context, tag):

@@ -9,7 +9,7 @@ import shutil
 import glob
 import warnings
 from utilities.path_configs import PathConfigs
-from utilities.pulse_logger import get_logger
+from utilities.py_logger import get_logger
 
 warnings.simplefilter('always', DeprecationWarning)
 logger = get_logger(logger_name=__name__)

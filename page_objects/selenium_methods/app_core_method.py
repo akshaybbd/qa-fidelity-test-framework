@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from utilities.allure_methods import allure_screenshot
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
-from utilities.pulse_logger import get_logger
+from utilities.py_logger import get_logger
 warnings.simplefilter("always", DeprecationWarning)
 
 

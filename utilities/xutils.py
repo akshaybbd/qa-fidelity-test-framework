@@ -7,7 +7,7 @@ import requests
 import numpy as np
 import pandas as pd
 
-from utilities.pulse_logger import get_logger
+from utilities.py_logger import get_logger
 
 logger = get_logger(logger_name=__name__)
 

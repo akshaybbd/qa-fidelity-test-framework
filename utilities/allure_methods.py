@@ -4,7 +4,7 @@
 import allure
 from allure_commons.types import AttachmentType
 from selenium import webdriver
-from utilities.pulse_logger import get_logger
+from utilities.py_logger import get_logger
 from utilities.xutils import *
 
 logger = get_logger(logger_name=__name__)
