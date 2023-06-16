@@ -38,6 +38,7 @@ class CorePage:
 
     def clicker(self,ui_xpath: str):
         """To click on web element"""
+        element = WebDriverWait(self.driver, timeout).until(EC.element_to_be_clickable(locator))
 
         sleep(2)
         content = self.driver.find_element("xpath", ui_xpath).text

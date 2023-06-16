@@ -22,9 +22,6 @@ NOTE - you may need to set-up\install an allure seperately for that please refer
 **Extensions you need to Add in your VS code**
 
 vscode-icons
-
-
-
 BDD -Feature-Editor
 BDD Goto steps
 BDD Highlighter
@@ -35,8 +32,5 @@ Cucumber Goto step
 Feature Syntax Highlight and Snippets (Cucumber/Gherkin)
 Pytest BDD
 vscode-cucumberjs-navigator
-
-
-
 
 **Reference video: https://www.youtube.com/playlist?list=PLUDwpEzHYYLsARXz1o3Ldt1FnvRbvlxsS**

@@ -14,3 +14,7 @@
 2023-06-15 17:06:05 - [page_objects.selenium_methods.web_core_method] - INFO - Verified text is: About Us
 2023-06-15 17:06:05 - [page_objects.selenium_methods.web_core_method] - INFO - Highlighted: a
 2023-06-15 17:06:11 - [page_objects.selenium_methods.web_core_method] - INFO - Verified text is: Our Products & Services
+2023-06-16 13:43:57 - [page_objects.selenium_methods.web_core_method] - INFO - Highlighted: a
+2023-06-16 13:44:04 - [page_objects.selenium_methods.web_core_method] - INFO - Verified text is: About Us
+2023-06-16 13:44:04 - [page_objects.selenium_methods.web_core_method] - INFO - Highlighted: a
+2023-06-16 13:44:10 - [page_objects.selenium_methods.web_core_method] - INFO - Verified text is: Our Products & Services
