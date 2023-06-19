@@ -17,6 +17,7 @@ from utilities.appium_driver_utils import *
 from utilities.path_configs import get_path_to_file
 from utilities.read_properties import read_config_file
 from selenium import webdriver
+from utilities.path_configs import PathConfigs
 #from appium import webdriver
 
 
@@ -28,8 +29,10 @@ def chrome_driver_setup(context):
 
     try:
         #context.driver = webdriver.Chrome(ChromeDriverManager().install())
-        context.driver=webdriver.Chrome()
-       # context.driver = initialize_driver()
+        """Use this for local execution"""
+        #context.driver=webdriver.Chrome()
+        """use this for docker CI-CD execution"""
+        context.driver = initialize_driver()
         context.driver.maximize_window()
         yield context.driver
     finally:
