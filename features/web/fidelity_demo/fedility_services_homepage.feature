@@ -8,6 +8,9 @@ Feature:Launch Fidelity Services Group web application
     Given I am on Fidelity services group home page
     Then I verify about us menu
     Then I verify and click Our Products & Services menu
+    Then I perfom click
+    Then i do something
+    
 
 
   Examples:

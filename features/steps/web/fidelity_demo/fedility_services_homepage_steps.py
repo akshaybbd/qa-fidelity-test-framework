@@ -19,3 +19,8 @@ def step_imp(context):
 @then('I verify and click Our Products & Services menu')
 def step_imp(context):
     FIDE_OBJ.product_services_menu(context.driver)
+
+@then(('I perfom click'))
+def step_function():
+    # Add Your Code Here
+    pass
