@@ -17,12 +17,9 @@ def initialize_driver():
     chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
     chrome_options.add_argument("--window-size=1920,1080")
     chrome_options.add_argument('ignore-certificate-errors')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
     caps = DesiredCapabilities.CHROME
     caps["goog:loggingPrefs"] = {"performance": "ALL"}
 
-    return webdriver.Chrome(
-        executable_path=PathConfigs.path_to_chrome_driver_pipeline
-        if "/tmp/workspace" in os.path.dirname(os.path.realpath(__file__))
-        else PathConfigs.path_to_local_chrome_driver,
-        options=chrome_options,
-    )
+    return webdriver.Chrome(options=chrome_options)
