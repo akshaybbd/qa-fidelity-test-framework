@@ -38,8 +38,6 @@ class CorePage:
 
     def clicker(self,ui_xpath: str):
         """To click on web element"""
-        element = WebDriverWait(self.driver, timeout).until(EC.element_to_be_clickable(locator))
-
         sleep(2)
         content = self.driver.find_element("xpath", ui_xpath).text
         logger.info(content + " Button is clickable")
@@ -49,11 +47,11 @@ class CorePage:
 
     def input_delete(self, ui_xpath: str, input: str):
         """ """
-
         element = self.driver.find_element("xpath", ui_xpath)
         length = len(element.get_attribute('value'))
         element.send_keys(length * Keys.BACKSPACE)
         element.send_keys(input)
+        logger.info("feild is cleared")
 
     def input(self, ui_xpath: str, user_info: str):
         """Input(send_keys) method sets text into an editable element (text bar, text area, button)"""
@@ -101,7 +99,6 @@ class CorePage:
 
     def check_if_path_exists(self, ui_xpath):
         """Validate if an element exists"""
-
         try:
             self.driver.find_element("xpath", ui_xpath)
         except NoSuchElementException:
@@ -162,29 +159,26 @@ class CorePage:
     def alert_accept(self):
         """Accept alert by clicking on OK button"""
 
-        alert = self.driver.switch_to_alert()
-        alert.accept()
-
+        alert = self.driver.switch_to.alert.accept()
+        
     def alert_dismiss(self):
         """Dissmiss alert by clicking on 'x' icon"""
-
-        alert = self.driver.switch_to_alert()
-        alert.dismiss()
+        alert = self.driver.switch_to.alert.dismiss()
 
     def iframe_name(self, frame_name: str):
         """Switching to a frame which has name"""
 
-        self.driver.switch_to_frame(frame_name)
+        self.driver.switch_to.frame(frame_name)
 
     def iframe_id(self, frame_id):
         """Switching to a frame which has id"""
 
-        self.driver.switch_to_frame(frame_id)
+        self.driver.switch_to.frame(frame_id)
 
     def iframe_index(self, frame_index):
         """Switching to a frame which has index"""
 
-        self.driver.switch_to_frame(frame_index)
+        self.driver.switch_to.frame(frame_index)
 
     def parent_frame(self):
         """Switching back to parent frame"""
@@ -193,8 +187,7 @@ class CorePage:
 
     def deafult_content(self):
         """Swithing back to deafult content"""
-
-        self.driver.switch_to_default_content()
+        self.driver.switch_to.default_content()
 
     def mouse_hover(self, ui_xpath: str):
         """Mouse hovering"""
@@ -203,16 +196,15 @@ class CorePage:
         actions = ActionChains(self.driver)
         actions.move_to_element(menu)
         actions.perform()
+        logger.info("Mouse hoverd")
 
     def mouse_drag_drop(self, source_xpath: str, destination_xpath: str):
         """Perform drag and drop"""
 
         source = self.driver.find_element(source_xpath)
         target = self.driver.find_element(destination_xpath)
-
         actions = ActionChains(self.driver)
         actions.drag_and_drop(source, target)
-
         actions.perform()
 
     def mouse_click(self, ui_xpath: str):
@@ -221,6 +213,7 @@ class CorePage:
         element_to_click = self.driver.find_element("xpath", ui_xpath)
         actions = ActionChains(self.driver)
         actions.click(element_to_click).perform()
+        logger.info(element_to_click+"Element hoverd")
 
     def double_click(self, ui_xpath):
         """Double click on mouse action"""
@@ -368,16 +361,6 @@ class CorePage:
     def scroll_to_X_axis(self,X_axis):
         """Scroll to the up"""
         self.driver.execute_script("window.scrollBy("+X_axis+",0)", "")
-
-    def file_delete(self,file_location: str):
-        """To delete file"""
-        if os.path.exists(file_location):
-            os.remove(file_location)
-            logger.info(f"File Deleted Successfully")
-        else:
-            logger.info(f"File does not exist")
-
-        self.driver.set_window_size(original_size['width'], original_size['height'])
 
     def scroll_down(self):
         """this wills scroll down by 350 pixel"""
