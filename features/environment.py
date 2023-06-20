@@ -1,6 +1,5 @@
 # created by Abhijeet Thorat at 2023-06-13 17:22.
 #
-
 from behave.fixture import fixture_call_params
 from fixtures.connection_fixture import (
     use_fixture_by_tag,
