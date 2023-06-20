@@ -81,6 +81,8 @@ def get_url(self):
 
 """Loads a web page in the current browser session."""
 
+        """Loads a web page in the current browser session."""
+
 your code
 
 Whenever you raise a PR it must have discription.
@@ -95,4 +97,5 @@ Every helper file must have _helper.py as a postfix.
 
 Do not keep commented code in code repository.(If you needed it in future mention it in comment)
 
+ main
 +++
